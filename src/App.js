@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+// src/App.js
+
+import React from 'react';
 import './App.css';
+import WelcomeSlide from './slides/WelcomeSlide';
+import AboutSlide from './slides/AboutSlide';
+import Package1Slide from './slides/Package1Slide';
+import ProcessSlide from './slides/ProcessSlide';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WelcomeSlide />
+      <AboutSlide />
+      <Package1Slide />
+      <ProcessSlide />
+      {/* Additional slides can be added here */}
     </div>
   );
 }

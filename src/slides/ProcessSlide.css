@@ -1,0 +1,142 @@
+/* src/slides/ProcessSlide.css */
+
+.process-slide {
+  background-color: #000000;
+  color: white;
+  height: 70vh; /* Increase height to prevent overlap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw; /* Ensure the content doesn't touch the sides */
+  box-sizing: border-box;
+}
+
+.process-content-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Restrict content to a maximum width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.process-content {
+  flex: 2;
+  margin-right: 5vw; /* Relative margin */
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.process-content h2 {
+  font-size: clamp(2rem, 3vw, 3.5rem); /* Responsive font size */
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw; /* Responsive gap */
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.step-number {
+  flex: 0 0 clamp(1rem, 2.5vw, 2.5rem); /* Responsive width */
+  height: clamp(1rem, 2.5vw, 2.5rem); /* Responsive height */
+  background-color: #8b2252;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.step-text h3 {
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Responsive font size */
+  margin-bottom: 0.5rem;
+}
+
+.step-text p {
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem); /* Responsive font size */
+}
+
+.process-image {
+  flex: 1;
+  margin-left: 5vw; /* Relative margin */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.process-image img {
+  width: 100%;
+  max-width: 400px; /* Adjusted size */
+  filter: brightness(90%);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  object-fit: contain; /* Ensure image aspect ratio is maintained */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .process-slide {
+    padding: 0 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .process-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .process-content {
+    margin-right: 0;
+    margin-bottom: 2vw;
+  }
+
+  .process-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .process-steps {
+    width: 200px;
+    gap: 3vw;
+  }
+
+  .step-number {
+    flex: 0 0 4vw;
+    height: 4vw;
+  }
+
+  .step-text h3 {
+    font-size: 2.5vw;
+  }
+
+  .step-text p {
+    font-size: 2vw;
+  }
+
+  .process-image {
+    margin-left: 0;
+  }
+
+  .process-image img {
+    max-width: 100%;
+    max-height: 40vh;
+  }
+}

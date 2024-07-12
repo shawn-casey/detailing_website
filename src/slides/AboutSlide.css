@@ -1,0 +1,90 @@
+/* src/slides/AboutSlide.css */
+
+.about-slide {
+  background-color: #000000;
+  color: white;
+  height: auto; /* Allow the height to adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw; /* Ensure content doesn't touch the sides */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.about-content-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Restrict content to a maximum width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 5vw; /* Relative margin */
+  padding-bottom: 2vw; /* Add space below text */
+}
+
+.about-text h2 {
+  font-size: clamp(2rem, 3vw, 3.5rem); /* Responsive font size */
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  font-size: clamp(1rem, 1.5vw, 2rem); /* Responsive font size */
+}
+
+.about-image {
+  flex: 1;
+  margin-left: 5vw; /* Relative margin */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%; /* Ensures image spans full container width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: none; /* Override any max-width for mobile */
+  filter: brightness(90%);
+  border-radius: 8px;
+  object-fit: cover; /* Cover the available space without stretching */
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-slide {
+    padding: 0 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .about-content-wrapper {
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+
+  .about-text h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .about-text p {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .about-image {
+    margin-left: 0;
+    margin-top: 2vw;
+  }
+
+  .about-image img {
+    max-height: none; /* Remove max height restrictions */
+  }
+}

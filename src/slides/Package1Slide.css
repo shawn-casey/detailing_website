@@ -1,0 +1,82 @@
+/* src/slides/Package1Slide.css */
+
+.package1-slide {
+  background-color: #000000;
+  color: white;
+  min-height: 120vh; /* Increase the height to accommodate all packages */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5vw; /* Add side padding */
+  box-sizing: border-box;
+}
+
+.package1-content-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Restrict content to a maximum width */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.package1-content {
+  margin-bottom: 5vh; /* Add spacing between packages */
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.package1-content h2 {
+  font-size: 2.5rem; /* Adjust font size */
+  margin-bottom: 1.5rem;
+}
+
+.package1-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 2vw; /* Relative gap between boxes */
+}
+
+.package1-box {
+  flex: 1;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.package1-box h3 {
+  font-size: 1.75rem; /* Adjust font size */
+  margin-bottom: 0.5rem;
+}
+
+.package1-box p {
+  font-size: 1.25rem; /* Adjust font size */
+}
+
+.package1-box:last-child {
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .package1-slide {
+    padding: 0 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .package1-content h2 {
+    font-size: 4vw;
+  }
+
+  .package1-boxes {
+    gap: 3vw;
+  }
+
+  .package1-box h3 {
+    font-size: 3vw;
+  }
+
+  .package1-box p {
+    font-size: 2.5vw;
+  }
+}

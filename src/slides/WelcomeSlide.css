@@ -1,0 +1,61 @@
+/* src/slides/WelcomeSlide.css */
+
+.welcome-slide {
+  position: relative;
+  background-image: url('./assets/car1.jpg'); /* Adjust the path to your actual image location */
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity to control the dimming effect */
+  z-index: 1;
+}
+
+.welcome-content-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Restrict content to a maximum width */
+  margin: 0 auto;
+  padding: 0 5vw; /* Ensure the content doesn't touch the sides */
+  z-index: 2; /* Ensure the text appears above the overlay */
+}
+
+.welcome-text {
+  color: white;
+}
+
+.welcome-text h1 {
+  font-size: clamp(2rem, 5vw, 4rem); /* Adjust font size dynamically */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Adjust font size dynamically */
+  font-weight: 200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcome-content-wrapper {
+    padding: 0 5vw;
+  }
+
+  .welcome-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .welcome-text p {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
